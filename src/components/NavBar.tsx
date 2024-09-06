@@ -35,7 +35,7 @@ const NavBar = (props: Props) => {
   };
 
   return (
-      <div className='w-full sticky top-0 bg-white dark:bg-black p-4 border-b z-50'>
+      <div className='w-full sticky top-0 z-20 bg-white dark:bg-black p-4 border-b'>
         <div className='max-w-7xl w-full mx-auto'>
           <div className='flex flex-row w-full items-center justify-between'>
             <div className='relative gap-2 h-10 flex flex-row items-center justify-center'>
