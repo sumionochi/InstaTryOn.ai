@@ -2,6 +2,9 @@ import Banner from "@/components/Banner";
 import HeroHeader from "@/components/HeroHeader";
 import NavBar from "@/components/NavBar";
 
+//bg-gradient-to-r from-teal-200 to-teal-500
+//bg-gradient-to-r from-teal-200 to-teal-500
+
 export default function Home() {
   return (
     <main className="relative">
