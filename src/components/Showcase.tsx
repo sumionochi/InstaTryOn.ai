@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
-import ShowcaseHead from '@/assets/images/audience.webp'
+import ShowcaseHead from '@/assets/datar/female/flow/AnimateDiff_00058.gif'
 import { progress } from 'framer-motion'
 import { Pause, Play } from 'lucide-react'
 type Props = {}
@@ -55,7 +55,7 @@ const Showcase = ({}: Props) => {
 
   return (
     <div>
-        <div className="relative p-4 overflow-hidden">
+        <div className="relative mx-auto max-w-7xl p-4 overflow-hidden">
             <Image
                 src={ShowcaseHead}
                 alt="Showcase Image"
