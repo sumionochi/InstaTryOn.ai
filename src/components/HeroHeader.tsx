@@ -12,7 +12,7 @@ import { ArrowUpRight } from "lucide-react";
 const HeroHeader = () => {
   return (
     <div className="relative">
-      <div className="p-4 relative py-40 pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
+      <div className="p-4 relative pb-16 pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
         <div className="bg-gray-300/20 dark:bg-white/10 rounded-lg relative z-10">
           <div className="bg-gradient-to-r relative from-teal-400 dark:from-teal-200 dark:to-teal-500 to-teal-500 bg-clip-text text-transparent [-webkit-background-clip:text]">
             <a href="#" className="flex items-center gap-2 border rounded-lg py-2 px-3">

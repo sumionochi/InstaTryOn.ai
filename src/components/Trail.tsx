@@ -133,7 +133,7 @@ const TrailImages = ({ distanceThreshold = 140 }: TrailImagesProps) => {
         left: 0,
         right: 0,
         bottom: 0,
-        zIndex: 0,
+        zIndex: 1,
       }}
       onMouseMove={(e) => (mouseInfo.now = { x: e.pageX, y: e.pageY })}
     >

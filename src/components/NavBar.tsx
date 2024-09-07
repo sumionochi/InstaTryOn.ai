@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import logoImage from '@/assets/images/logosaas.png';
+import logoImage from '@/assets/icons/linkedin.svg';
 import MenuIcon from '@/assets/icons/menu.svg';
 import Image from 'next/image';
 import { Themetoggle } from './ui/Themetoggle';

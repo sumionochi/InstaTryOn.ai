@@ -131,6 +131,10 @@ const config: Config = {
   					opacity: '100%'
   				}
   			},
+			scroll: {
+			'0%': { transform: 'translateX(0)' },
+			'100%': { transform: 'translateX(-100%)' }, // Moves left until the end of the image list
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -141,8 +145,16 @@ const config: Config = {
   			'fade-bottom': 'fade-bottom 3s ease-in-out forwards',
   			'fade-top': 'fade-top 3s ease-in-out forwards',
   			'accordion-downd': 'accordion-down 0.2s ease-out',
-  			'accordion-upd': 'accordion-up 0.2s ease-out'
-  		}
+  			'accordion-upd': 'accordion-up 0.2s ease-out',
+			scroll: 'scroll 30s linear infinite',
+			
+		},
+		blur: {
+			sm: '2px',
+		},
+		transitionProperty: {
+			'filter': 'filter',
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
