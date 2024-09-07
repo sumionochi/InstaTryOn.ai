@@ -22,7 +22,7 @@ const images = [
 
 const LogoTicker = () => {
   return (
-    <div className='relative z-0 py-8 px-4 pb-10'>
+    <div className='relative z-0 py-8 px-4 pb-40'>
       <h2 className='text-center text-sm md:text-lg mb-8 font-semibold text-gray-400'>
         Let's You and your customer's Try On styles from 10,000+ E-commerce stores, Anytime, Anywhere.
       </h2>
@@ -32,7 +32,7 @@ const LogoTicker = () => {
           {images.concat(images).map((src, index) => (
             <Image
               key={index}
-              className='flex-none h-8 w-auto grayscale hover:grayscale-0 transition-filter duration-200 ease-linear hover:blur-none'
+              className='flex-none h-5 md:h-8 w-auto grayscale hover:grayscale-0 transition-filter duration-200 ease-linear hover:blur-none'
               src={src}
               alt={`slider-${index}`}
             />

@@ -11,15 +11,15 @@ const Banner = (props: Props) => {
             New
           </span>
           <span className='hidden sm:inline whitespace-nowrap'>
-            Join us at Make with Notion — a conference for tomorrow’s tools, creators, and ideas.{' '}
+            Join our waitlist & receive daily newsletters - {''}
             <a href="#" className='font-bold hover:underline whitespace-nowrap'>
               Use code MAKE25 for 25% off
             </a>
           </span>
           <span className='inline sm:hidden'>
-            Join our Waitlist for updates{' '}
-            <a href="#" className=' underline hover:text-white'>
-              Learn more
+            Join our Newsletter & waitlist {''}
+            <a href="#" className='font-bold hover:underline whitespace-nowrap'>
+              Learn More
             </a>
           </span>
         </p>

@@ -14,9 +14,9 @@ export default function Home() {
       <div className="h-[2px] relative z-30 bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500" />
       <NavBar/>
       <HeroHeader/>
-      <Trail/>
       <LogoTicker/>
       <Showcase/>      
+      <Trail/>
     </main>
   );
 }

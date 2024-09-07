@@ -11,7 +11,6 @@ import {
 
 import a1Female from '@/assets/datar/female/product/a1.png';
 import a2Female from '@/assets/datar/female/product/a2.png';
-import a3Female from '@/assets/datar/female/product/a3.png';
 import b2Female from '@/assets/datar/female/product/b2.png';
 import b3Female from '@/assets/datar/female/product/b3.jpeg';
 
@@ -125,6 +124,23 @@ const TrailImages = ({ distanceThreshold = 140 }: TrailImagesProps) => {
     }
   });
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // Account for the scroll position by subtracting scrollX and scrollY
+      const x = e.pageX - window.scrollX;
+      const y = e.pageY - window.scrollY;
+
+      mouseInfo.now = { x, y };
+    };
+
+    // Bind the mousemove event globally
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [mouseInfo]);
+
   return (
     <div
       style={{
@@ -133,9 +149,9 @@ const TrailImages = ({ distanceThreshold = 140 }: TrailImagesProps) => {
         left: 0,
         right: 0,
         bottom: 0,
-        zIndex: 1,
+        zIndex: 1, 
+        pointerEvents: "none", 
       }}
-      onMouseMove={(e) => (mouseInfo.now = { x: e.pageX, y: e.pageY })}
     >
       {images.map((imageSrc, i) => (
         <ImagePlaceholder
