@@ -135,6 +135,14 @@ const config: Config = {
 			'0%': { transform: 'translateX(0)' },
 			'100%': { transform: 'translateX(-100%)' }, // Moves left until the end of the image list
 			},
+			bubbleLeft: {
+			'0%, 100%': { transform: 'translateX(-200px)' },
+			'50%': { transform: 'translateX(200px)' },
+			},
+			bubbleRight: {
+			'0%, 100%': { transform: 'translateX(200px)' },
+			'50%': { transform: 'translateX(-200px)' },
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -147,7 +155,8 @@ const config: Config = {
   			'accordion-downd': 'accordion-down 0.2s ease-out',
   			'accordion-upd': 'accordion-up 0.2s ease-out',
 			scroll: 'scroll 30s linear infinite',
-			
+			'bubble-left': 'bubbleLeft 5s infinite',
+        	'bubble-right': 'bubbleRight 5s infinite',
 		},
 		blur: {
 			sm: '2px',

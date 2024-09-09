@@ -3,9 +3,23 @@ import HeroHeader from "@/components/HeroHeader";
 import LogoTicker from "@/components/LogoTicker";
 import NavBar from "@/components/NavBar";
 import Showcase from "@/components/Showcase";
+import Solutions from "@/components/Solutions";
 import Trail from "@/components/Trail";
 //bg-gradient-to-r from-teal-200 to-teal-500
 //bg-gradient-to-r from-teal-200 to-teal-500
+
+/* 
+1. Banner
+2. NavBar
+3. Hero Header - intro
+4. Logo Ticker
+5. 3 explanation section - 4 features, Video demo each, Explaination
+6. Pricing
+7. Testimonial
+8. Frequent questions
+9. Sign up for free today
+10. Bottom bar 
+*/
 
 export default function Home() {
   return (
@@ -15,7 +29,9 @@ export default function Home() {
       <NavBar/>
       <HeroHeader/>
       <LogoTicker/>
-      <Showcase/>      
+      <Solutions/>
+      <Showcase/>  
+      
       <Trail/>
     </main>
   );

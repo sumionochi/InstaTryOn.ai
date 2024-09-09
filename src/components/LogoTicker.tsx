@@ -22,12 +22,12 @@ const images = [
 
 const LogoTicker = () => {
   return (
-    <div className='relative z-0 py-8 px-4 pb-40'>
+    <div className='relative z-0 py-8 px-4 pb-20'>
       <h2 className='text-center text-sm md:text-lg mb-8 font-semibold text-gray-400'>
         Let's You and your customer's Try On styles from 10,000+ E-commerce stores, Anytime, Anywhere.
       </h2>
       <div className='relative overflow-hidden'>
-        <div className='absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-white via-transparent to-white dark:bg-gradient-to-r dark:from-black dark:via-transparent dark:to-black'></div>
+        <div className='absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-white via-transparent to-white dark:bg-gradient-to-r dark:from-background dark:via-transparent dark:to-background'></div>
         <div className='flex gap-16 animate-scroll'>
           {images.concat(images).map((src, index) => (
             <Image

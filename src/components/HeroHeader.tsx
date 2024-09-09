@@ -78,8 +78,8 @@ const HeroHeader = () => {
           Before You Buy
         </h1>
 
-        <p className="text-center z-10 max-w-2xl text-lg md:text-2xl">
-          Try on clothes virtually from all angles, whether on a model or on yourself, from the comfort of your home.
+        <p className="text-center z-10 max-w-3xl text-lg md:text-2xl">
+          Discover, Shop & Try on clothes virtually from all angles, whether on a model or on yourself, from the comfort of your home.
         </p>
 
         <div className="text-center z-10">

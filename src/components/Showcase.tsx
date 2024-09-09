@@ -65,7 +65,7 @@ const Showcase = ({}: Props) => {
         </div> */}
         <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
             <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
-                No model needed <br />No studio needed <br />Just your product !
+                No model needed <br />No studio needed <br />Just you & your product !
             </h1>
             <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>Upload a photo or search the web for your clothing product and generate an endless number of premium quality resolution on-model photos & virtual try-on of it.</h1>
             <div className='flex justify-center items-center'>
