@@ -22,7 +22,7 @@ const images = [
 
 const LogoTicker = () => {
   return (
-    <div className='relative z-0 py-8 px-4 pb-20'>
+    <div className='relative z-0 py-8 px-4 pb-40'>
       <h2 className='text-center text-sm md:text-lg mb-8 font-semibold text-gray-400'>
         Let's You and your customer's Try On styles from 10,000+ E-commerce stores, Anytime, Anywhere.
       </h2>

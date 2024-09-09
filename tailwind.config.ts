@@ -143,6 +143,10 @@ const config: Config = {
 			'0%, 100%': { transform: 'translateX(200px)' },
 			'50%': { transform: 'translateX(-200px)' },
 			},
+			glow: {
+				'0%': { backgroundPosition: '200% 0' },
+				'100%': { backgroundPosition: '-200% 0' },
+			  },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -157,6 +161,8 @@ const config: Config = {
 			scroll: 'scroll 30s linear infinite',
 			'bubble-left': 'bubbleLeft 5s infinite',
         	'bubble-right': 'bubbleRight 5s infinite',
+			glow: 'glow 2s infinite',
+			glow2: 'glow 5s infinite',
 		},
 		blur: {
 			sm: '2px',

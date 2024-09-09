@@ -70,15 +70,16 @@ const ImagePlaceholder = ({ position, imageSrc }: ImagePlaceholderProps) => {
         position: "absolute",
         top: "0",
         left: "0",
-        width: "250px",
-        height: "312px",
         borderRadius: "8px",
         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         ...style,
+        width: "150px",
+        height: "188px",
       }}
     />
   );
 };
+
 
 type TrailImagesProps = {
   distanceThreshold?: number;
