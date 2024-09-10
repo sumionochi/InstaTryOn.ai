@@ -11,20 +11,22 @@ import { ArrowUpRight } from "lucide-react";
 
 const HeroHeader = () => {
   return (
-    <div className="relative pb-10">
+    <div className="relative pb-4">
       <div className="p-4 relative pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
+        <div className="flex flex-col gap-4">
         <div className="bg-gray-300/20 dark:bg-white/10 rounded-lg relative z-10">
-          <div className="bg-gradient-to-r relative from-teal-400 dark:from-teal-200 dark:to-teal-500 to-teal-500 bg-clip-text text-transparent [-webkit-background-clip:text]">
+          <div className="bg-gradient-to-r relative to-pink-600 from-purple-300 bg-clip-text text-transparent [-webkit-background-clip:text]">
             <a href="#" className="flex items-center gap-2 border rounded-lg py-2 px-3">
-              <span className="font-bold text-[12px] md:text-base">Beta Release</span>
+              <span className="font-semibold text-[14px] text-transparent bg-gradient-to-r rounded-lg bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
               <ArrowUpRight className="text-primary w-4 md:w-6" />
             </a>
           </div>
         </div>
 
         <h1 className="text-4xl md:text-7xl z-10 font-extrabold text-center">
-          Instant Try On
+          <span className="bg-gradient-to-r to-pink-700 from-purple-300 bg-clip-text text-transparent">Instant</span> Try On
         </h1>
+        </div>
 
         <div className="flex justify-center items-center">
           <div className="flex items-center justify-between w-full gap-4">
@@ -75,7 +77,7 @@ const HeroHeader = () => {
         </div>
 
         <h1 className="text-4xl md:text-7xl z-10 font-extrabold text-center">
-          Before You Buy
+          Before You <span className="">Buy</span>
         </h1>
 
         <p className="text-center z-10 max-w-3xl text-lg md:text-2xl">
@@ -83,11 +85,11 @@ const HeroHeader = () => {
         </p>
 
         <div className="text-center z-10">
-          <Button className="relative h-12 md:h-16 px-12 md:px-8 rounded-lg border text-xl transition-all">
-            <span className="relative z-10 font-bold text-sm md:text-base">START FOR FREE</span>
+          <Button className="relative h-14 md:h-14 px-4 md:px-4 rounded-lg border text-xl transition-all">
+            <span className="relative z-10 font-bold text-sm md:text-base">TRY ON FOR FREE</span>
           </Button>
           <p className="md:mt-2 text-[12px] md:text-sm text-gray-400">
-            Try for free. No credit card required.
+            No credit card required.
           </p>
         </div>
       </div>

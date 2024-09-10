@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Explain from "@/components/Explain";
 import HeroHeader from "@/components/HeroHeader";
 import LogoTicker from "@/components/LogoTicker";
 import NavBar from "@/components/NavBar";
@@ -31,7 +32,7 @@ export default function Home() {
       <LogoTicker/>
       <Solutions/>
       <Showcase/>  
-      
+      <Explain/>
       <Trail/>
     </main>
   );

@@ -55,10 +55,10 @@ const Showcase = ({}: Props) => {
   };
 
   return (
-    <div className='relative z-10 p-4'>
+    <div className='relative z-10 p-4 pb-10 md:pb-40'>
       <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
-          No model needed <br />No studio needed <br />Just you & your product!
+          No model needed <br />No studio needed <br />Just your product!
         </h1>
         <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>
           Upload a photo or search the web for your clothing product and generate an endless number of premium quality resolution on-model photos & virtual try-on of it.
@@ -69,10 +69,10 @@ const Showcase = ({}: Props) => {
             {segments.map((segment) => (
             <button
                 key={segment.id}
-                className={`px-4 py-2 font-bold hover:shadow-lg hover:bg-gray-200 bg-white dark:bg-black dark:hover:bg-gray-800 text-sm border rounded-lg transition-all duration-500 ease-in-out ${
+                className={`px-4 py-2 font-bold hover:shadow-lg hover:bg-gray-200 dark:hover:bg-gray-800 text-sm border rounded-lg transition-all duration-500 ease-in-out ${
                 currentSegment === segment.id
-                    ? 'bg-teal-300 dark:bg-teal-600 hover:bg-teal-300 dark:hover:bg-teal-600 rounded-lg  transition-all duration-500'
-                    : ''
+                    ? 'bg-pink-400 dark:bg-pink-600 hover:bg-pink-400 dark:hover:bg-pink-600 rounded-lg transition-all duration-500'
+                    : 'bg-white dark:bg-black'
                 }`}
                 onClick={() => handleSegmentClick(segment.id)}
             >

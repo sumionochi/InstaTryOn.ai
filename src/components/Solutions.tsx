@@ -12,26 +12,26 @@ import { Button } from "./ui/button";
   const Solutions = () => {
     return (
       <>
-        <h1 className="text-4xl mb-4 relative z-10 md:text-7xl font-extrabold text-center">
+        <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
             Featured Solutions
         </h1>
         
-        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 pb-40">
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 pb-10 md:pb-40">
             <div className="relative group w-full">
                 <Card className="border pt-4 flex flex-col justify-between h-full transition-shadow duration-1000 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
                     <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
-                        <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-teal-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
-                        <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-teal-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
+                        <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
+                        <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
                     </div>
 
-                    <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg from-teal-500 via-rose-500 to-purple-500 bg-[length:200%_100%] bg-clip-text animate-glow">
+                    <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg  to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
                         Built for Indie Designers 
                     </h1>
 
                     <CardHeader>
                     <CardTitle className="flex flex-row items-center gap-2">
                         <Shirt className="w-5 h-5" />
-                        <p className="text-xl font-bold">Instant Virtual Try On</p>
+                        <p className="text-xl font-bold">Mix&Match - Instant Virtual Try On</p>
                     </CardTitle>
                     <CardDescription>
                         Build a personalized brand for your clothing line or Mix&Match the styles for yourself on models with diverse body types, including your own.
@@ -49,11 +49,11 @@ import { Button } from "./ui/button";
             <div className="relative group w-full">
                 <Card className="border pt-4 transition-shadow duration-1000 ease-in-out hover:shadow-lg h-full relative rounded-lg shadow-sm">
                     <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
-                    <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
-                    <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
+                    <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-pink-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
+                    <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-pink-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
                     </div>
 
-                    <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg from-teal-500 via-rose-500 to-purple-500 bg-[length:200%_100%] bg-clip-text animate-glow">
+                    <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg  to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
                         Built for Businesses/Enterprise 
                     </h1>
 
@@ -82,7 +82,7 @@ import { Button } from "./ui/button";
                 <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-blue-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
                 </div>
 
-                <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg from-teal-500 via-rose-500 to-purple-500 bg-[length:200%_100%] bg-clip-text animate-glow">
+                <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg  to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
                         Built for Developers 
                     </h1>
 
@@ -104,8 +104,8 @@ import { Button } from "./ui/button";
             </Card>
             </div>
 
-            <div className="rounded-lg transition-shadow duration-1000 ease-in-out bg-white dark:bg-black hover:shadow-lg p-4 flex flex-col justify-center items-center text-center gap-6">
-                <div>
+            <div className="rounded-lg transition-shadow duration-1000 ease-in-out border bg-white dark:bg-[#0C0A09] p-4 flex flex-col justify-center items-end text-center gap-6">
+                <div className="text-start flex flex-col gap-2">
                     <h1 className="text-2xl md:text-3xl font-extrabold">
                         Make the most of your shoppers, at every visit.
                     </h1>
@@ -137,11 +137,11 @@ import { Button } from "./ui/button";
                     </div>
                 </div>
                 <div className="text-center z-10">
-                <Button className="relative h-12 px-4 rounded-lg border text-md transition-all">
-                    <span className="relative z-10 font-bold text-sm md:text-base">START FOR FREE</span>
+                <Button className="relative h-14 px-4 rounded-lg border text-md transition-all">
+                    <span className="relative z-10 font-bold text-sm md:text-base">TRY ON FOR FREE</span>
                 </Button>
                 <p className="md:mt-2 text-[12px] md:text-sm text-gray-400">
-                    Try for free. No credit card required.
+                    No credit card required.
                 </p>
                 </div>
             </div>
