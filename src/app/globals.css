@@ -93,3 +93,83 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* First set of bubbles */
+.bubbles {
+  @apply absolute inset-0 overflow-hidden -z-10;
+}
+
+.bubbles::before,
+.bubbles::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,0,150,0.5) 0%, rgba(150,0,255,0.3) 100%);
+  animation: move 15s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+.bubbles::before {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: 5%;
+  animation-duration: 12s;
+}
+
+.bubbles::after {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 70%;
+  animation-duration: 18s;
+}
+
+/* Second set of purple bubbles */
+.purple-bubbles {
+  @apply absolute inset-0 overflow-hidden -z-10;
+}
+
+.purple-bubbles::before,
+.purple-bubbles::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(162, 0, 255, 0.5) 0%, rgba(75,0,130,0.3) 100%);
+  animation: move 20s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+.purple-bubbles::before {
+  width: 550px;
+  height: 550px;
+  top: 20%;
+  left: 60%;
+  animation-duration: 10s;
+}
+
+.purple-bubbles::after {
+  width: 650px;
+  height: 650px;
+  top: 50%;
+  left: 20%;
+  animation-duration: 25s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-30%) translateX(20%) scale(1.1);
+  }
+  50% {
+    transform: translateY(20%) translateX(-20%) scale(0.9);
+  }
+  75% {
+    transform: translateY(-40%) translateX(30%) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}

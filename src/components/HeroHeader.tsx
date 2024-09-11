@@ -12,20 +12,24 @@ import { ArrowUpRight } from "lucide-react";
 const HeroHeader = () => {
   return (
     <div className="relative pb-4">
+      <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
+      
+      <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
+
       <div className="p-4 relative pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
         <div className="flex flex-col gap-4">
-        <div className="bg-gray-300/20 dark:bg-white/10 rounded-lg relative z-10">
-          <div className="bg-gradient-to-r relative to-pink-600 from-purple-300 bg-clip-text text-transparent [-webkit-background-clip:text]">
-            <a href="#" className="flex items-center gap-2 border rounded-lg py-2 px-3">
-              <span className="font-semibold text-[14px] text-transparent bg-gradient-to-r rounded-lg bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
-              <ArrowUpRight className="text-primary w-4 md:w-6" />
-            </a>
+          <div className="bg-white dark:bg-background rounded-lg relative z-10">
+            <div className="bg-gradient-to-r relative to-pink-600 from-purple-300 bg-clip-text text-transparent [-webkit-background-clip:text]">
+              <a href="#" className="flex items-center gap-2 border rounded-lg py-2 px-3">
+                <span className="font-semibold text-[10px] md:text-[14px] text-transparent bg-gradient-to-r text-center rounded-lg bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce <br className="inline md:hidden" /> clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
+                <ArrowUpRight className="text-primary w-4 md:w-6" />
+              </a>
+            </div>
           </div>
-        </div>
 
-        <h1 className="text-4xl md:text-7xl z-10 font-extrabold text-center">
-          <span className="bg-gradient-to-r to-pink-700 from-purple-300 bg-clip-text text-transparent">Instant</span> Try On
-        </h1>
+          <h1 className="text-4xl md:text-7xl z-10 font-extrabold text-center">
+            <span className="bg-gradient-to-r to-pink-700 from-purple-300 bg-clip-text text-transparent">Instant</span> Try On
+          </h1>
         </div>
 
         <div className="flex justify-center items-center">

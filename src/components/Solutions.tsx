@@ -11,26 +11,31 @@ import { Button } from "./ui/button";
   
   const Solutions = () => {
     return (
-      <>
+      <div className="relative">
+
+        
+
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
             Featured Solutions
         </h1>
         
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 pb-10 md:pb-40">
             <div className="relative group w-full">
-                <Card className="border pt-4 flex flex-col justify-between h-full transition-shadow duration-1000 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
+                <Card className="border pt-4 flex flex-col justify-between items-center h-full transition-shadow duration-1000 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
                     <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
                         <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
                         <div className="absolute right-0 top-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
                     </div>
 
                     <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg  to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
-                        Built for Indie Designers 
+                        Built for You & Indie Designers
                     </h1>
 
                     <CardHeader>
                     <CardTitle className="flex flex-row items-center gap-2">
+                        <div>
                         <Shirt className="w-5 h-5" />
+                        </div>
                         <p className="text-xl font-bold">Mix&Match - Instant Virtual Try On</p>
                     </CardTitle>
                     <CardDescription>
@@ -54,12 +59,12 @@ import { Button } from "./ui/button";
                     </div>
 
                     <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-sm font-bold text-transparent bg-gradient-to-r rounded-lg  to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
-                        Built for Businesses/Enterprise 
+                        Built for Your Business/Enterprise 
                     </h1>
 
                     <CardHeader>
                     <CardTitle className="flex flex-row items-center gap-2">
-                        <ShoppingBag className="w-5 h-5" />
+                        <div><ShoppingBag className="w-5 h-5" /></div>
                         <p className="text-xl font-bold">Shopping Closet - for your customers</p>
                     </CardTitle>
                     <CardDescription>
@@ -146,7 +151,7 @@ import { Button } from "./ui/button";
                 </div>
             </div>
         </div>
-      </>
+      </div>
     );
   };
   

@@ -56,6 +56,8 @@ const Showcase = ({}: Props) => {
 
   return (
     <div className='relative z-10 p-4 pb-10 md:pb-40'>
+      <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
+        <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
       <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
           No model needed <br />No studio needed <br />Just your product!

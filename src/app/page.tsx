@@ -3,6 +3,7 @@ import Explain from "@/components/Explain";
 import HeroHeader from "@/components/HeroHeader";
 import LogoTicker from "@/components/LogoTicker";
 import NavBar from "@/components/NavBar";
+import Pricing from "@/components/Pricing";
 import Showcase from "@/components/Showcase";
 import Solutions from "@/components/Solutions";
 import Trail from "@/components/Trail";
@@ -33,6 +34,7 @@ export default function Home() {
       <Solutions/>
       <Showcase/>  
       <Explain/>
+      <Pricing/>
       <Trail/>
     </main>
   );
