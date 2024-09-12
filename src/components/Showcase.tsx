@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import { Code, CodeXml, Pause, Play, Shirt, ShoppingBag } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 type Props = {}
 
@@ -55,7 +56,7 @@ const Showcase = ({}: Props) => {
   };
 
   return (
-    <div className='relative z-10 p-4 pb-10 md:pb-40'>
+    <section className='relative z-10 p-4 pb-10 md:pb-40'>
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
         <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
       <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
@@ -107,7 +108,7 @@ const Showcase = ({}: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

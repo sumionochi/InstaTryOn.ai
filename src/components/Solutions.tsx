@@ -1,3 +1,4 @@
+"use client"
 import { 
     Card, 
     CardHeader, 
@@ -8,13 +9,11 @@ import {
   } from "@/components/ui/card";
 import { Badge, Code, CodeXml, Shirt, ShoppingBag } from "lucide-react";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
   
   const Solutions = () => {
     return (
       <div className="relative">
-
-        
-
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
             Featured Solutions
         </h1>
@@ -48,6 +47,8 @@ import { Button } from "./ui/button";
                         <div key={index} className="w-24 h-24 border rounded-md"></div>
                     ))}
                     </CardContent>
+
+                    
                 </Card>
             </div>
 
@@ -109,7 +110,12 @@ import { Button } from "./ui/button";
             </Card>
             </div>
 
-            <div className="rounded-lg transition-shadow duration-1000 ease-in-out border bg-white dark:bg-[#0C0A09] p-4 flex flex-col justify-center items-end text-center gap-6">
+            <motion.div
+      whileHover={{ y: -8 }}
+      transition={{
+        type: "spring",
+        bounce: 0.7,
+      }} className="rounded-lg transition-shadow duration-1000 ease-in-out border bg-white dark:bg-[#0C0A09] p-4 flex flex-col justify-center items-end text-center gap-6">
                 <div className="text-start flex flex-col gap-2">
                     <h1 className="text-2xl md:text-3xl font-extrabold">
                         Make the most of your shoppers, at every visit.
@@ -149,7 +155,7 @@ import { Button } from "./ui/button";
                     No credit card required.
                 </p>
                 </div>
-            </div>
+            </motion.div>
         </div>
       </div>
     );

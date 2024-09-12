@@ -146,7 +146,29 @@ const config: Config = {
 			glow: {
 				'0%': { backgroundPosition: '200% 0' },
 				'100%': { backgroundPosition: '-200% 0' },
-			  },
+			},
+			buttonheartbeat: {
+				"0%": {
+					"box-shadow": '0 0 0 0 theme("colors.pink.500")',
+					transform: "scale(1)",
+				},
+				"50%": {
+					"box-shadow": '0 0 0 7px theme("colors.pink.500/0")',
+					transform: "scale(1.05)",
+				},
+				"100%": {
+					"box-shadow": '0 0 0 0 theme("colors.pink.500/0")',
+					transform: "scale(1)",
+				},
+			},
+			"background-shine": {
+			from: {
+				backgroundPosition: "0 0",
+			},
+			to: {
+				backgroundPosition: "-200% 0",
+			},
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -163,6 +185,8 @@ const config: Config = {
         	'bubble-right': 'bubbleRight 5s infinite',
 			glow: 'glow 2s infinite',
 			glow2: 'glow 5s infinite',
+			buttonheartbeat: "buttonheartbeat 2s infinite ease-in-out",
+			"background-shine": "background-shine 2s linear infinite",
 		},
 		blur: {
 			sm: '2px',

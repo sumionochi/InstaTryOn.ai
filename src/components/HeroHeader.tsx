@@ -11,17 +11,17 @@ import { ArrowUpRight } from "lucide-react";
 
 const HeroHeader = () => {
   return (
-    <div className="relative pb-4">
+    <section className="relative pb-4">
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
       
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
 
       <div className="p-4 relative pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
         <div className="flex flex-col gap-4">
-          <div className="bg-white dark:bg-background rounded-lg relative z-10">
+          <div className="bg-white dark:bg-background rounded-full relative z-10">
             <div className="bg-gradient-to-r relative to-pink-600 from-purple-300 bg-clip-text text-transparent [-webkit-background-clip:text]">
-              <a href="#" className="flex items-center gap-2 border rounded-lg py-2 px-3">
-                <span className="font-semibold text-[10px] md:text-[14px] text-transparent bg-gradient-to-r text-center rounded-lg bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce <br className="inline md:hidden" /> clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
+              <a href="#" className="flex items-center gap-2 border rounded-full py-2 px-3">
+                <span className="font-semibold text-[10px] md:text-[14px] text-transparent bg-gradient-to-r text-center rounded-full bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce <br className="inline md:hidden" /> clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
                 <ArrowUpRight className="text-primary w-4 md:w-6" />
               </a>
             </div>
@@ -89,7 +89,7 @@ const HeroHeader = () => {
         </p>
 
         <div className="text-center z-10">
-          <Button className="relative h-14 md:h-14 px-4 md:px-4 rounded-lg border text-xl transition-all">
+          <Button className="relative animate-buttonheartbeat h-14 md:h-14 px-4 md:px-4 rounded-lg border text-xl transition-all">
             <span className="relative z-10 font-bold text-sm md:text-base">TRY ON FOR FREE</span>
           </Button>
           <p className="md:mt-2 text-[12px] md:text-sm text-gray-400">
@@ -97,7 +97,7 @@ const HeroHeader = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

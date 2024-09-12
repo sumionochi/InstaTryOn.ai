@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import ModelClothInput from "@/assets/datar/female/product/a3.png";
@@ -6,22 +7,33 @@ import ImageOutput from "@/assets/datar/female/flow/anime1.gif";
 import ModelGifInput from "@/assets/datar/female/flow/anime2.gif";
 import ModelGifExtract from "@/assets/datar/female/flow/anime3.gif";
 import ModelGifOutput from "@/assets/datar/female/flow/anime4.gif";
-
+import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent
+  CardContent,
 } from "@/components/ui/card";
-import { Camera, User, PlayCircle, Shirt, Move, ShoppingBag, UserRound, Clock, Globe2, Image as LucideImage } from 'lucide-react'; // Import the relevant icons
+import {
+  Camera,
+  User,
+  PlayCircle,
+  Shirt,
+  Move,
+  ShoppingBag,
+  UserRound,
+  Clock,
+  Globe2,
+  Image as LucideImage,
+} from "lucide-react"; // Import the relevant icons
 
 interface CardData {
   step: number;
   icon: React.FC<any>;
   title: string;
   description: string;
-  image: StaticImageData; // Type for next/image imported assets
+  image: StaticImageData;
   alt: string;
   imageWidth: number;
 }
@@ -31,16 +43,18 @@ const cardData: CardData[] = [
     step: 1,
     icon: Camera,
     title: "Discover/Upload product photo",
-    description: "Take a clear photo of your product or discover fashion deals from thousands of stores and upload it for a personalized try-on.",
+    description:
+      "Take a clear photo of your product or discover fashion deals from thousands of stores and upload it for a personalized try-on.",
     image: ModelClothInput,
     alt: "cloth input",
-    imageWidth: 350, // Example numeric width value
+    imageWidth: 350,
   },
   {
     step: 2,
     icon: User,
     title: "Select a Model & Customize",
-    description: "Choose a model that represents your audience or use a custom model. Adjust body types and poses to showcase your clothing.",
+    description:
+      "Choose a model that represents your audience or use a custom model. Adjust body types and poses to showcase your clothing.",
     image: ModelInput,
     alt: "model input",
     imageWidth: 330,
@@ -49,7 +63,8 @@ const cardData: CardData[] = [
     step: 3,
     icon: PlayCircle,
     title: "Admire your generated shoot",
-    description: "View the generated shoot with the selected model wearing your product, perfectly suited to the body type and style.",
+    description:
+      "View the generated shoot with the selected model wearing your product, perfectly suited to the body type and style.",
     image: ImageOutput,
     alt: "diffused Try On result",
     imageWidth: 240,
@@ -58,7 +73,8 @@ const cardData: CardData[] = [
     step: 4,
     icon: Shirt,
     title: "Choose/Upload a Try On",
-    description: "Upload your own Try On video/gesture or choose one from AI-generated suggestions to see your clothing products in action.",
+    description:
+      "Upload your own Try On video/gesture or choose one from AI-generated suggestions to see your clothing products in action.",
     image: ModelGifInput,
     alt: "Try On input",
     imageWidth: 240,
@@ -67,7 +83,8 @@ const cardData: CardData[] = [
     step: 5,
     icon: Move,
     title: "Movements are mapped by AI",
-    description: "Experience how your garments flow and react to movements. AI maps realistic movements to give a true-to-life feel.",
+    description:
+      "Experience how your garments flow and react to movements. AI maps realistic movements to give a true-to-life feel.",
     image: ModelGifExtract,
     alt: "diffused Try On result",
     imageWidth: 240,
@@ -76,7 +93,8 @@ const cardData: CardData[] = [
     step: 6,
     icon: ShoppingBag,
     title: "Your Instant Try On is Ready!",
-    description: "Get your final AI-powered Try On instantly and review how your garments look. Ready for instant sharing or feedback.",
+    description:
+      "Get your final AI-powered Try On instantly and review how your garments look. Ready for instant sharing or feedback.",
     image: ModelGifOutput,
     alt: "diffused Try On result",
     imageWidth: 240,
@@ -93,36 +111,35 @@ const features: Feature[] = [
   {
     icon: UserRound,
     title: "Multiple Genders",
-    description: "Select the gender that matches your clothing brand's audience."
+    description: "Select the gender that matches your clothing brand's audience.",
   },
   {
     icon: Clock,
     title: "Various Age Groups",
-    description: "Tailor your model's age to effectively reach your target demographic."
+    description: "Tailor your model's age to effectively reach your target demographic.",
   },
   {
     icon: Globe2,
     title: "Different Ethnicities",
-    description: "Change the model's ethnicity to perfectly match your target customer."
+    description: "Change the model's ethnicity to perfectly match your target customer.",
   },
   {
     icon: LucideImage,
     title: "Unique Backgrounds",
-    description: "Customize the background of the shoot to achieve your desired result."
+    description: "Customize the background of the shoot to achieve your desired result.",
   },
   {
     icon: Camera,
     title: "Different Angles",
-    description: "Experiment with various angles to capture the perfect shot."
+    description: "Experiment with various angles to capture the perfect shot.",
   },
   {
     icon: User,
     title: "Various Poses",
-    description: "Personalize the model's pose to achieve the perfect look."
-  }
+    description: "Personalize the model's pose to achieve the perfect look.",
+  },
 ];
 
-// Added index as a required prop to ImageCardProps interface
 interface ImageCardProps {
   icon: React.FC<any>;
   title: string;
@@ -130,10 +147,18 @@ interface ImageCardProps {
   image: StaticImageData;
   alt: string;
   imageWidth: number;
-  index: number; // Added index to ImageCardProps
+  index: number;
 }
 
-const ImageCard: React.FC<ImageCardProps> = ({ icon: IconComponent, title, description, image, alt, imageWidth, index }) => {
+const ImageCard: React.FC<ImageCardProps> = ({
+  icon: IconComponent,
+  title,
+  description,
+  image,
+  alt,
+  imageWidth,
+  index,
+}) => {
   return (
     <div className="relative group w-full">
       <Card className="border pt-6 flex flex-col justify-between items-center h-full transition-shadow duration-500 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
@@ -157,7 +182,13 @@ const ImageCard: React.FC<ImageCardProps> = ({ icon: IconComponent, title, descr
         </CardHeader>
 
         <CardContent className="z-10">
-          <Image src={image} alt={alt} width={imageWidth} height={imageWidth * 0.75} className="z-10 rounded-lg" />
+          <Image
+            src={image}
+            alt={alt}
+            width={imageWidth}
+            height={imageWidth * 0.75}
+            className="z-10 rounded-lg"
+          />
         </CardContent>
       </Card>
     </div>
@@ -170,19 +201,30 @@ interface FeatureCardProps {
   description: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: IconComponent, title, description }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon: IconComponent,
+  title,
+  description,
+}) => {
   return (
-    <div className="p-6  mx-auto border transition-shadow duration-500 ease-in-out bg-white dark:bg-background rounded-xl hover:shadow-lg flex flex-col items-center justify-center text-center space-y-4">
+    <motion.div
+      whileHover={{ y: -8 }}
+      transition={{
+        type: "spring",
+        bounce: 0.7,
+      }}
+      className="p-6 cursor-pointer mx-auto border transition-shadow duration-500 ease-in-out bg-white dark:bg-background rounded-xl hover:shadow-lg flex flex-col items-center justify-center text-center space-y-4"
+    >
       <IconComponent className="w-8 h-8 mb-4" />
       <h2 className="text-lg font-bold">{title}</h2>
       <p className="text-sm">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
 const Explain = () => {
   return (
-    <div className="relative overflow-hidden z-10 p-4 pb-10 md:pb-40">
+    <section className="relative overflow-hidden z-10 p-4 pb-10 md:pb-40">
       <div className="flex max-w-7xl mx-auto relative z-0 justify-center gap-4 md:gap-6 items-center flex-col">
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
           Empower your shoppers{" "}
@@ -209,7 +251,7 @@ const Explain = () => {
               image={card.image}
               alt={card.alt}
               imageWidth={card.imageWidth}
-              index={index} // Pass index prop
+              index={index}
             />
           ))}
         </div>
@@ -225,7 +267,7 @@ const Explain = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
