@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Explain from "@/components/Explain";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import HeroHeader from "@/components/HeroHeader";
 import LogoTicker from "@/components/LogoTicker";
@@ -38,6 +39,7 @@ export default function Home() {
       <Explain/>
       <Pricing/>
       <Testimonial/>
+      <FAQ/>
       <Trail/>
       <Footer />
     </main>
