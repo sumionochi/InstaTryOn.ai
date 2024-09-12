@@ -49,10 +49,10 @@ const FAQ = (props: Props) => {
           Frequently Asked <br /> Questions (FAQ)
         </h1>
         <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
-          Pay only for the Try-On you generate and use, <br className="hidden md:inline" /> without subscription lock-in.
+          From more reach out to us through Mail. <br  className='hidden md:inline'/> Join Our Newsletter to have more indepth understanding of our product.
         </h1>
 
-        <div className="max-w-4xl w-full mx-auto">
+        <div className="max-w-4xl w-full mx-auto mt-6">
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>

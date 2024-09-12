@@ -165,6 +165,15 @@ const config: Config = {
 				'0%': { backgroundPosition: '200% 0' },
 				'100%': { backgroundPosition: '-200% 0' },
 			},
+			beam: {
+			'0%': { backgroundPosition: '0% 50%' },
+			'100%': { backgroundPosition: '100% 50%' },
+			},
+			"border-spin": {
+				"100%": {
+					transform: "rotate(-360deg)"
+				}
+			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -183,6 +192,8 @@ const config: Config = {
 			glow2: 'glow 5s infinite',
 			buttonheartbeat: "buttonheartbeat 2s infinite ease-in-out",
 			"background-shine": "background-shine 4s linear infinite",
+			beam: 'beam 3s linear infinite',
+			"border-spin": "border-spin 9s linear infinite" 
 		},
 		blur: {
 			sm: '2px',

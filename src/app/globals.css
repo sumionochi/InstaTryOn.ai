@@ -173,3 +173,43 @@
     transform: translateY(0) translateX(0) scale(1);
   }
 }
+
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Background color of the scrollbar track */
+  border-radius: 100px; /* Fully round the edges of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf; /* Scrollbar color */
+  border-radius: 100px; /* Fully round the edges of the scrollbar thumb */
+  border: 2px solid #000000; /* Adds space around the scrollbar */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #bfbfbf #000000; /* Thumb color and track background */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+ background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+ background: #888;
+ border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background: #555;
+}

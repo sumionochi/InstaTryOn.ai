@@ -76,6 +76,7 @@ const ImagePlaceholder = ({ position, imageSrc }: ImagePlaceholderProps) => {
         width: "150px",
         height: "188px",
       }}
+      className="hidden md:inline"
     />
   );
 };
