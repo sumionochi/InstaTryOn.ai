@@ -74,7 +74,7 @@ const Showcase = ({}: Props) => {
                 key={segment.id}
                 className={`px-4 py-2 font-bold hover:shadow-lg hover:bg-gray-200 dark:hover:bg-gray-800 text-sm border rounded-lg transition-all duration-500 ease-in-out ${
                 currentSegment === segment.id
-                    ? 'bg-pink-400 dark:bg-pink-600 hover:bg-pink-400 dark:hover:bg-pink-600 rounded-lg transition-all duration-500'
+                    ? 'bg-pink-400 animate-buttonheartbeat dark:bg-pink-600 hover:bg-pink-400 dark:hover:bg-pink-600 rounded-lg transition-all duration-500'
                     : 'bg-white dark:bg-black'
                 }`}
                 onClick={() => handleSegmentClick(segment.id)}

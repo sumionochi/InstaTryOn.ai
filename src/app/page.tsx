@@ -1,11 +1,13 @@
 import Banner from "@/components/Banner";
 import Explain from "@/components/Explain";
+import Footer from "@/components/Footer";
 import HeroHeader from "@/components/HeroHeader";
 import LogoTicker from "@/components/LogoTicker";
 import NavBar from "@/components/NavBar";
 import Pricing from "@/components/Pricing";
 import Showcase from "@/components/Showcase";
 import Solutions from "@/components/Solutions";
+import Testimonial from "@/components/Testimonial";
 import Trail from "@/components/Trail";
 //bg-gradient-to-r from-teal-200 to-teal-500
 //bg-gradient-to-r from-teal-200 to-teal-500
@@ -27,7 +29,7 @@ export default function Home() {
   return (
     <main className="relative">
       <Banner/>
-      <div className="h-[2px] relative z-30 bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500" />
+      <div className="h-[2px] relative z-30 bg-gradient-to-r from-yellow-500 via-purple-500 to-green-500" />
       <NavBar/>
       <HeroHeader/>
       <LogoTicker/>
@@ -35,7 +37,9 @@ export default function Home() {
       <Showcase/>  
       <Explain/>
       <Pricing/>
+      <Testimonial/>
       <Trail/>
+      <Footer />
     </main>
   );
 }

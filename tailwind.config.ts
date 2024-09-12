@@ -161,13 +161,9 @@ const config: Config = {
 					transform: "scale(1)",
 				},
 			},
-			"background-shine": {
-			from: {
-				backgroundPosition: "0 0",
-			},
-			to: {
-				backgroundPosition: "-200% 0",
-			},
+			'background-shine': {
+				'0%': { backgroundPosition: '200% 0' },
+				'100%': { backgroundPosition: '-200% 0' },
 			},
   		},
   		animation: {
@@ -186,7 +182,7 @@ const config: Config = {
 			glow: 'glow 2s infinite',
 			glow2: 'glow 5s infinite',
 			buttonheartbeat: "buttonheartbeat 2s infinite ease-in-out",
-			"background-shine": "background-shine 2s linear infinite",
+			"background-shine": "background-shine 4s linear infinite",
 		},
 		blur: {
 			sm: '2px',

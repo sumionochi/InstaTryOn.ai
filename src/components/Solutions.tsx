@@ -10,7 +10,7 @@ import {
 import { Badge, Code, CodeXml, Shirt, ShoppingBag } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
-  
+
   const Solutions = () => {
     return (
       <div className="relative">
@@ -110,12 +110,7 @@ import { motion } from "framer-motion";
             </Card>
             </div>
 
-            <motion.div
-      whileHover={{ y: -8 }}
-      transition={{
-        type: "spring",
-        bounce: 0.7,
-      }} className="rounded-lg transition-shadow duration-1000 ease-in-out border bg-white dark:bg-[#0C0A09] p-4 flex flex-col justify-center items-end text-center gap-6">
+            <div className="rounded-lg transition-shadow duration-1000 ease-in-out border bg-white dark:bg-[#0C0A09] p-4 flex flex-col justify-center items-end text-center gap-6">
                 <div className="text-start flex flex-col gap-2">
                     <h1 className="text-2xl md:text-3xl font-extrabold">
                         Make the most of your shoppers, at every visit.
@@ -126,36 +121,51 @@ import { motion } from "framer-motion";
                     </p>
                 </div>
                 <div className="flex gap-4 justify-between items-start flex-col md:flex-row max-w-5xl mx-auto">
-                    <div className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
+                    <motion.div
+                        whileHover={{ y: -8 }}
+                        transition={{
+                            type: "spring",
+                            bounce: 0.7,
+                        }} className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
                     <h2 className="text-4xl font-bold">
                         +9,000<span className="text-2xl"></span>
                     </h2>
                     <p className="text-gray-500 text-sm">Outfits created by shoppers in the Mix&Match Styling Experience.</p>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
+                    <motion.div
+                        whileHover={{ y: -8 }}
+                        transition={{
+                            type: "spring",
+                            bounce: 0.7,
+                        }} className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
                     <h2 className="text-4xl font-bold">+77%</h2>
                     <p className="text-gray-500 text-sm">
                         Uplift in conversion measured for the shoppers engaged with InstaTryOn.
                     </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
+                    <motion.div
+                        whileHover={{ y: -8 }}
+                        transition={{
+                            type: "spring",
+                            bounce: 0.7,
+                        }} className="flex rounded-lg cursor-pointer transition-shadow duration-1000 ease-in-out hover:shadow-lg flex-col items-center space-y-2 border p-4">
                     <h2 className="text-4xl font-bold">+22%</h2>
                     <p className="text-gray-500 text-sm">
                         Uplift in the average order value with Try On collections.
                     </p>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="text-center z-10">
-                <Button className="relative h-14 px-4 rounded-lg border text-md transition-all">
+                <Button className="relative animate-buttonheartbeat h-14 px-4 rounded-lg border text-md transition-all">
                     <span className="relative z-10 font-bold text-sm md:text-base">TRY ON FOR FREE</span>
                 </Button>
                 <p className="md:mt-2 text-[12px] md:text-sm text-gray-400">
                     No credit card required.
                 </p>
                 </div>
-            </motion.div>
+            </div>
         </div>
       </div>
     );

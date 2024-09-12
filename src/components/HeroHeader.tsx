@@ -8,24 +8,29 @@ import ModelOutputGif1 from "@/assets/datar/female/video/a1.gif";
 import ModelDress1 from "@/assets/datar/female/product/a1.png";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroHeader = () => {
   return (
     <section className="relative pb-4">
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
-      
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
 
       <div className="p-4 relative pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col justify-center items-center to-black">
         <div className="flex flex-col gap-4">
-          <div className="bg-white dark:bg-background rounded-full relative z-10">
+          <motion.div
+            whileHover={{ y: -8 }}
+            transition={{
+              type: "spring",
+              bounce: 0.7,
+            }} className="bg-white border dark:bg-background rounded-full relative z-10">
             <div className="bg-gradient-to-r relative to-pink-600 from-purple-300 bg-clip-text text-transparent [-webkit-background-clip:text]">
-              <a href="#" className="flex items-center gap-2 border rounded-full py-2 px-3">
-                <span className="font-semibold text-[10px] md:text-[14px] text-transparent bg-gradient-to-r text-center rounded-full bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce <br className="inline md:hidden" /> clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
+              <a href="#" className="flex items-center gap-2 rounded-full py-2 px-3">
+                <span className="font-semibold text-[10px] md:text-[14px] text-transparent bg-gradient-to-r text-center rounded-lg bg-[length:200%_100%] bg-clip-text animate-glow">Helping 10M+ eCommerce <br className="inline md:hidden" /> clothing products shine online <span className="text-yellow-500">⭐⭐⭐⭐⭐</span></span>
                 <ArrowUpRight className="text-primary w-4 md:w-6" />
               </a>
             </div>
-          </div>
+          </motion.div>
 
           <h1 className="text-4xl md:text-7xl z-10 font-extrabold text-center">
             <span className="bg-gradient-to-r to-pink-700 from-purple-300 bg-clip-text text-transparent">Instant</span> Try On

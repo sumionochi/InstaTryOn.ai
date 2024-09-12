@@ -256,7 +256,11 @@ const Explain = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
+            And much more...
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

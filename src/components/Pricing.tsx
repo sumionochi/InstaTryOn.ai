@@ -14,7 +14,7 @@ const Pricing = (props: Props) => {
             Pricing
         </h1>
         <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>
-          Upload a photo or search the web for your clothing product and generate an endless number of premium quality resolution on-model photos & virtual try-on of it.
+          Pay only for the Try-On you generate and use, <br className='hidden md:inline' /> without subscription lock-in.
         </h1>
         <StripePricing/>
       </div>
