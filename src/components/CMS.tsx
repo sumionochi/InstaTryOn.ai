@@ -1,6 +1,6 @@
-import { OrbitingCirclesComponent } from '@/lib/Orbit'
 import React from 'react'
 import StripePricing from './StripePricing'
+import { OrbitingCirclesDemo } from './Orbit'
 
 type Props = {}
 
@@ -11,11 +11,12 @@ const CMS = (props: Props) => {
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
       <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
-            CMS
+            CMS Integration
         </h1>
         <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>
-          Pay only for the Try-On you generate and use, <br className='hidden md:inline' /> without subscription lock-in.
+        InstaTryOn integrates with all leading CMS in the market to help you leverage the potential of Virtual Try On Shopping in seconds.
         </h1>
+        <OrbitingCirclesDemo/>
       </div>
     </section>
   )

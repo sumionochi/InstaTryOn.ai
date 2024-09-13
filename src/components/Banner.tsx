@@ -14,13 +14,13 @@ const Banner = (props: Props) => {
                 )}>
               New
             </span>
-            <span className='hidden sm:inline whitespace-nowrap'>
+            <span className='hidden md:inline whitespace-nowrap'>
               Subscribe to our newsletter for daily personalized outfits with links to the best prices, stores, and reviews.{' '}
               <span className='font-bold hover:underline whitespace-nowrap'>
               ✨ Join Now ✨
               </span>
             </span>
-            <span className='inline sm:hidden'>
+            <span className='inline md:hidden'>
             <span className='bg-gray-900 text-white text-xs px-2 py-1 rounded-full'>
               New
             </span> Get daily personalized outfits sent to your inbox {''}

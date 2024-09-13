@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import BgPic from "@/components/BgPic";
 import CMS from "@/components/CMS";
 import CardDissappear from "@/components/CardDissappear";
 import Explain from "@/components/Explain";
@@ -44,6 +45,7 @@ export default function Home() {
       <Testimonial/>
       <CardDissappear/>
       <FAQ/>
+      <BgPic/>
       <Trail/>
       <Footer />
     </main>

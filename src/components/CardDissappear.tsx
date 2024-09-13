@@ -34,7 +34,7 @@ const faqItems: FAQItem[] = [
       answer:
         'InstaTryOn seamlessly integrates with any e-commerce platform via a simple JavaScript (JS) integration. This ensures quick deployment without major changes to your existing CMS or backend systems, enhancing your online shopping experience efficiently.',
     },
-  ];
+];
   
 
 const CardDissappear = (props: Props) => {

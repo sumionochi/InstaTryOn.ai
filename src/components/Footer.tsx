@@ -90,12 +90,12 @@ export default function Footer() {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="mt-8 border-t pt-8 text-center">
+                <div className="border-t pt-6 text-center">
                     <ul className="flex justify-center space-x-4 text-xs">
                         <li><a href="/terms" className="transition hover:opacity-75">Terms & Conditions</a></li>
                         <li><a href="/privacy" className="transition hover:opacity-75">Privacy Policy</a></li>
                     </ul>
-                    <p className="mt-8 text-xs">&copy; 2024 InstaTryOn.ai. All rights reserved.</p>
+                    <p className="mt-4 text-xs">&copy; 2024 InstaTryOn.ai. All rights reserved.</p>
                 </div>
             </div>
         </footer>
