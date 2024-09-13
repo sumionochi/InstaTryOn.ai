@@ -59,7 +59,7 @@ const NavBar = (props: Props) => {
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                             href="/"
                           >
-                            <Image src={logoImage} alt="Logo" className="h-6 w-6" />
+                            <MousePointerClick className='w-7 h-7'/>
                             <div className="mb-2 mt-4 text-lg font-medium">
                               InstaTryOn
                             </div>

@@ -31,97 +31,98 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-    {
-      name: 'Jamie Rivera',
-      username: '@jamietechguru00',
-      message: 'The AI-powered Try-On has revolutionized how I shop online. The increase in conversion rates after implementing this feature was astounding – our revenue jumped by 77%!',
-      avatar: avatar1,
-    },
-    {
-      name: 'Casey Jordan',
-      username: '@caseyj',
-      message: 'We saw an incredible uplift in average order value, up by 22%. The ability to see exactly how outfits look before purchase has led to more confident buying decisions.',
-      avatar: avatar2,
-    },
-    {
-      name: 'Jordan Patels',
-      username: '@jpateldesign',
-      message: 'Since adopting this AI-driven Try-On solution, customer engagement in our Mix&Match Styling Experience has skyrocketed, resulting in more outfits created and greater brand loyalty.',
-      avatar: avatar3,
-    },
-    {
-      name: 'Josh Smith',
-      username: '@jsmith',
-      message: 'The seamless integration of this AI Try-On system led to an instant boost in sales and a reduction in returns. Customers love being able to visualize the perfect fit.',
-      avatar: avatar4,
-    },
-    {
-      name: 'Taylor Kim',
-      username: '@taylorkimms',
-      message: 'Our conversion rates have jumped by 77% since we introduced the AI Try-On feature. It’s clear that customers feel more confident in their purchases when they can visualize outfits accurately.',
-      avatar: avatar5,
-    },
-    {
-      name: 'Sam Dawson',
-      username: '@ideasntechtips',
-      message: 'The real-time AI Try-On is a game-changer. We’ve seen an uplift in average order value of 22%, and customer feedback has been overwhelmingly positive.',
-      avatar: avatar6,
-    },
-    {
-      name: 'Morgan Lee',
-      username: '@morgberhowitz',
-      message: 'The AI Try-On system has drastically reduced return rates while boosting sales. The uplift in conversion has been impressive, with significant improvements in customer satisfaction.',
-      avatar: avatar7,
-    },
-    {
-      name: 'Riley Smith',
-      username: '@rileysmithnet',
-      message: 'Shoppers love the Mix&Match Styling Experience. The fact that customers can create millions of outfit combinations has been a strong driver of engagement and repeat purchases.',
-      avatar: avatar8,
-    },
-    {
-      name: 'Casey Harper',
-      username: '@casey09',
-      message: 'The implementation of AI-powered Try-On not only led to an uplift in average order value but also significantly enhanced customer trust and reduced cart abandonment rates.',
-      avatar: avatar9,
-    },
-    {
-      name: 'Avery Gonzalez',
-      username: '@averygonzalez',
-      message: 'The AI Try-On system allowed us to improve the customer experience, leading to a 22% increase in average basket size. Customers are more willing to experiment with new styles!',
-      avatar: avatar10,
-    },
-    {
-      name: 'Hunter Mitchell',
-      username: '@huntermitchell',
-      message: 'What impressed us the most was the boost in engagement. Customers spend more time creating and trying on different outfits, leading to higher conversion rates and bigger orders.',
-      avatar: avatar11,
-    },
-    {
-      name: 'Mason Reed',
-      username: '@masonreedfashion',
-      message: 'The AI Try-On feature reduced return rates significantly. Customers now have a more accurate understanding of how the clothes fit before purchasing, which also increased repeat buyers.',
-      avatar: avatar12,
-    },
-    {
-      name: 'Harper Parker',
-      username: '@harperparker',
-      message: 'Thanks to the AI-powered Try-On, we saw a 77% uplift in conversion rates. It’s an incredible tool for enhancing customer confidence and driving sales.',
-      avatar: avatar13,
-    },
-    {
-      name: 'Charlie Edwards',
-      username: '@charliedwardsstyle',
-      message: 'The AI-driven styling feature has allowed us to create personalized experiences for our shoppers, increasing customer engagement by over 50%. It’s a true game-changer for e-commerce.',
-      avatar: avatar14,
-    },
-    {
-      name: 'Quinn Taylor',
-      username: '@quinntaylorfashion',
-      message: 'The Mix&Match experience has been a hit with our customers, resulting in millions of outfits created and a significant boost in customer retention and lifetime value.',
-      avatar: avatar15,
-    },
-  ];
+  {
+    name: 'Jamie Rivera',
+    username: '@jamietechguru00',
+    message: 'The AI Try-On feature has transformed the way our customers shop. It’s easy to use, and we saw a 70% increase in engagement within the first week of launch!',
+    avatar: avatar1,
+  },
+  {
+    name: 'Casey Jordan',
+    username: '@caseyj',
+    message: 'Our customers are absolutely loving the AI Try-On. It’s made online shopping so much more enjoyable, and our return rates have dropped significantly.',
+    avatar: avatar2,
+  },
+  {
+    name: 'Jordan Patels',
+    username: '@jpateldesign',
+    message: 'We’ve seen an incredible 60% rise in customer satisfaction since integrating this feature. It’s like giving every customer a personal fitting room!',
+    avatar: avatar3,
+  },
+  {
+    name: 'Josh Smith',
+    username: '@jsmith',
+    message: 'The AI Try-On has been a massive hit for our store. Customers are spending more time on the site and making more confident purchases. It’s been a game-changer.',
+    avatar: avatar4,
+  },
+  {
+    name: 'Taylor Kim',
+    username: '@taylorkimms',
+    message: 'The Try-On feature makes it so easy for customers to visualize how clothes will look on them. It’s made shopping online feel like shopping in-store.',
+    avatar: avatar5,
+  },
+  {
+    name: 'Sam Dawson',
+    username: '@ideasntechtips',
+    message: 'Since launching the AI Try-On, our conversion rates have skyrocketed. Our customers love the ability to see outfits come to life in real-time.',
+    avatar: avatar6,
+  },
+  {
+    name: 'Morgan Lee',
+    username: '@morgberhowitz',
+    message: 'The increase in customer engagement has been remarkable. Customers are trying on multiple items, mixing and matching, and spending more than ever before.',
+    avatar: avatar7,
+  },
+  {
+    name: 'Riley Smith',
+    username: '@rileysmithnet',
+    message: 'We’ve reduced return rates by nearly 40% thanks to the AI Try-On. Customers now feel more confident about their purchases, which has boosted our revenue.',
+    avatar: avatar8,
+  },
+  {
+    name: 'Casey Harper',
+    username: '@casey09',
+    message: 'The AI Try-On feature has led to a huge surge in customer engagement. Our customers are creating their own looks and making more purchases than ever before.',
+    avatar: avatar9,
+  },
+  {
+    name: 'Avery Gonzalez',
+    username: '@averygonzalez',
+    message: 'The customer feedback has been overwhelmingly positive since we introduced the AI Try-On. It’s helping us stand out in a competitive market.',
+    avatar: avatar10,
+  },
+  {
+    name: 'Hunter Mitchell',
+    username: '@huntermitchell',
+    message: 'We’ve seen a 25% rise in average order value since launching the AI Try-On. It’s helping customers find exactly what they’re looking for, faster and more confidently.',
+    avatar: avatar11,
+  },
+  {
+    name: 'Mason Reed',
+    username: '@masonreedfashion',
+    message: 'The ability for customers to see how items fit before buying has been a huge driver for sales. Our overall customer satisfaction has increased tremendously.',
+    avatar: avatar12,
+  },
+  {
+    name: 'Harper Parker',
+    username: '@harperparker',
+    message: 'Customers love the interactive experience! Our return rate has dropped, and our sales have never been better. The AI Try-On is an absolute must-have for online stores.',
+    avatar: avatar13,
+  },
+  {
+    name: 'Charlie Edwards',
+    username: '@charliedwardsstyle',
+    message: 'The AI Try-On has been incredibly beneficial for our e-commerce business. It’s made the shopping experience so much smoother and enjoyable for our customers.',
+    avatar: avatar14,
+  },
+  {
+    name: 'Quinn Taylor',
+    username: '@quinntaylorfashion',
+    message: 'We’ve seen a tremendous uptick in sales since implementing the AI Try-On. Customers are spending more time on our site and leaving with full carts!',
+    avatar: avatar15,
+  }
+];
+
 
 const firstColumn = testimonials.slice(0, 5).concat(testimonials.slice(0, 5));
 const secondColumn = testimonials.slice(5, 10).concat(testimonials.slice(5, 10));
@@ -158,7 +159,7 @@ const Testimonial = (props: Props) => {
   }, []);
 
   return (
-    <section className="relative z-10 p-4 pb-10 md:pb-40">
+    <section className="relative z-10 p-4 pb-20 md:pb-40">
       <div className="flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col">
         <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
           What our users say

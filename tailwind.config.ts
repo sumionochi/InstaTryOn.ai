@@ -173,7 +173,17 @@ const config: Config = {
 				"100%": {
 					transform: "rotate(-360deg)"
 				}
-			}
+			},
+			orbit: {
+			"0%": {
+				transform:
+				"rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+			},
+			"100%": {
+				transform:
+				"rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+			},
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -193,7 +203,8 @@ const config: Config = {
 			buttonheartbeat: "buttonheartbeat 2s infinite ease-in-out",
 			"background-shine": "background-shine 4s linear infinite",
 			beam: 'beam 3s linear infinite',
-			"border-spin": "border-spin 9s linear infinite" 
+			"border-spin": "border-spin 9s linear infinite",
+			orbit: "orbit calc(var(--duration)*1s) linear infinite", 
 		},
 		blur: {
 			sm: '2px',

@@ -54,7 +54,6 @@ const nextConfig = {
         port: '',
         pathname: '/**'
       }],
-      domains: ['utfs.io'], 
     }
 };
 

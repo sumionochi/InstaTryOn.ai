@@ -1,4 +1,6 @@
 import Banner from "@/components/Banner";
+import CMS from "@/components/CMS";
+import CardDissappear from "@/components/CardDissappear";
 import Explain from "@/components/Explain";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -38,7 +40,9 @@ export default function Home() {
       <Showcase/>  
       <Explain/>
       <Pricing/>
+      <CMS/>
       <Testimonial/>
+      <CardDissappear/>
       <FAQ/>
       <Trail/>
       <Footer />

@@ -1,6 +1,5 @@
 import OrbitingCircles from "@/lib/Orbit-circle";
-import { IconProps } from "@radix-ui/react-icons/dist/types";
-import Image from "next/image";
+import { LucideIcon, ArrowRight, Home, Cloud, Settings } from "lucide-react";
 
 export function OrbitingCirclesComponent() {
   return (
@@ -9,14 +8,13 @@ export function OrbitingCirclesComponent() {
         Build Fast
       </span>
 
-      {/* Inner Circles */}
       <OrbitingCircles
         className="h-[30px] w-[30px] border-none bg-transparent"
         duration={20}
         delay={20}
         radius={80}
       >
-        <Icons.typescript />
+        <ArrowRight size={30} />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[30px] border-none bg-transparent"
@@ -24,17 +22,16 @@ export function OrbitingCirclesComponent() {
         delay={10}
         radius={80}
       >
-        <Icons.tailwind />
+        <Home size={30} />
       </OrbitingCircles>
 
-      {/* Outer Circles (reverse) */}
       <OrbitingCircles
         className="h-[50px] w-[50px] border-none bg-transparent"
         reverse
         radius={190}
         duration={20}
       >
-        <Icons.nextjs />
+        <Cloud size={50} />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[50px] border-none bg-transparent"
@@ -43,38 +40,8 @@ export function OrbitingCirclesComponent() {
         duration={20}
         delay={20}
       >
-        <Icons.supabase />
+        <Settings size={50} />
       </OrbitingCircles>
     </div>
   );
 }
-
-const Icons = {
-  typescript: (props: IconProps) => (
-    <Image src="https://utfs.io/f/5b51351d-218b-4931-a296-0a9275030aaf-8myeez.png" alt=""
-      width={100}
-      height={100}
-    />
-  ),
-  tailwind: (props: IconProps) => (
-    <Image src="https://utfs.io/f/666774c0-dc3a-4d5a-84b7-cc96e682db61-bhgw4o.png" alt=""
-      width={100}
-      height={100}
-    // className="bg-black p-2 rounded"
-    />
-  ),
-  supabase: (props: IconProps) => (
-    <Image src="https://utfs.io/f/c62a5d13-91e4-476f-9d36-786d9995c97f-rqpuxo.png" alt=""
-      width={100}
-      height={100}
-    // className="bg-black p-2 rounded"
-    />
-  ),
-  nextjs: (props: IconProps) => (
-    <Image src="https://utfs.io/f/a8df6965-e6df-417a-ab0b-b3ad33d701d7-hcfblw.png" alt=""
-      width={100}
-      height={100}
-      className="bg-white p-1 rounded"
-    />
-  ),
-};

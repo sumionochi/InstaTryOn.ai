@@ -37,31 +37,18 @@ const faqItems: FAQItem[] = [
   ];
   
 
-const FAQ = (props: Props) => {
+const CardDissappear = (props: Props) => {
   return (
-    <section
-      className="relative bg-white dark:bg-background z-10 p-4 pb-10 md:pb-40">
+    <section style={{
+        maskImage: 'linear-gradient(to bottom, transparent, black 30%, black 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 30%, black 100%)',
+      }}
+      className="relative bg-white dark:bg-background z-10 p-4">
       <div className="flex relative  z-0 justify-center gap-4 md:gap-6 items-center flex-col">
-        <h1 className="text-4xl inline md:inline relative z-10 md:text-7xl font-extrabold text-center">
-          Frequently Asked <br /> Questions (FAQ)
-        </h1>
-        <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
-          From more reach out to us through Mail. <br  className='hidden md:inline'/> Join Our Newsletter to have more indepth understanding of our product.
-        </h1>
-
-        <div className="max-w-4xl w-full mx-auto mt-6">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className='text-base text-start md:text-lg'>{item.question}</AccordionTrigger>
-                <AccordionContent className='text-base md:text-lg'>{item.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        
       </div>
     </section>
   );
 };
 
-export default FAQ;
+export default CardDissappear;
