@@ -1,4 +1,3 @@
-import { OrbitingCirclesComponent } from '@/lib/Orbit'
 import React from 'react'
 import StripePricing from './StripePricing'
 
