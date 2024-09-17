@@ -1,13 +1,14 @@
-"use client"
+"use client";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
+import BlurFade from "@/components/magicui/blur-fade"; 
 import ModelClothInput from "@/assets/datar/female/product/a3.png";
 import ModelInput from "@/assets/datar/female/model/a.png";
 import ImageOutput from "@/assets/datar/female/flow/anime1.gif";
 import ModelGifInput from "@/assets/datar/female/flow/anime2.gif";
 import ModelGifExtract from "@/assets/datar/female/flow/anime3.gif";
 import ModelGifOutput from "@/assets/datar/female/flow/anime4.gif";
-import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
@@ -26,7 +27,7 @@ import {
   Clock,
   Globe2,
   Image as LucideImage,
-} from "lucide-react"; // Import the relevant icons
+} from "lucide-react"; 
 
 interface CardData {
   step: number;
@@ -160,38 +161,40 @@ const ImageCard: React.FC<ImageCardProps> = ({
   index,
 }) => {
   return (
-    <div className="relative group w-full">
-      <Card className="border pt-6 flex flex-col justify-between items-center h-full transition-shadow duration-500 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
-        <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
-          <div className="absolute z-0 left-0 bottom-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
-          <div className="absolute z-0 right-0 top-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
-        </div>
+    <BlurFade delay={0.2 + index * 0.1} inView className="relative group w-full">
+      <>
+        <Card className="border pt-6 flex flex-col justify-between items-center h-full transition-shadow duration-500 ease-in-out hover:shadow-lg relative rounded-lg shadow-sm">
+          <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
+            <div className="absolute z-0 left-0 bottom-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:translate-x-[200%]"></div>
+            <div className="absolute z-0 right-0 top-0 w-48 h-48 rounded-full bg-purple-500 opacity-50 blur-3xl transition-transform duration-1000 group-hover:-translate-x-[200%]"></div>
+          </div>
 
-        <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-lg font-bold text-transparent bg-gradient-to-r rounded-lg to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
-          Step {index + 1}
-        </h1>
+          <h1 className="absolute whitespace-nowrap top-2 left-2 inline-block px-4 py-2 text-lg font-bold text-transparent bg-gradient-to-r rounded-lg to-pink-700 from-purple-400 bg-[length:200%_100%] bg-clip-text animate-glow">
+            Step {index + 1}
+          </h1>
 
-        <CardHeader>
-          <CardTitle className="flex flex-row items-center gap-2">
-            <div>
-              <IconComponent className="w-5 h-5" />
-            </div>
-            <p className="text-xl font-bold">{title}</p>
-          </CardTitle>
-          <CardDescription>{description}</CardDescription>
-        </CardHeader>
+          <CardHeader>
+            <CardTitle className="flex flex-row items-center gap-2">
+              <div>
+                <IconComponent className="w-5 h-5" />
+              </div>
+              <p className="text-xl font-bold">{title}</p>
+            </CardTitle>
+            <CardDescription>{description}</CardDescription>
+          </CardHeader>
 
-        <CardContent className="z-10">
-          <Image
-            src={image}
-            alt={alt}
-            width={imageWidth}
-            height={imageWidth * 0.75}
-            className="z-10 rounded-lg"
-          />
-        </CardContent>
-      </Card>
-    </div>
+          <CardContent className="z-10">
+            <Image
+              src={image}
+              alt={alt}
+              width={imageWidth}
+              height={imageWidth * 0.75}
+              className="z-10 rounded-lg"
+            />
+          </CardContent>
+        </Card>
+      </>
+    </BlurFade>
   );
 };
 
@@ -207,18 +210,20 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   description,
 }) => {
   return (
-    <motion.div
-      whileHover={{ y: -8 }}
-      transition={{
-        type: "spring",
-        bounce: 0.7,
-      }}
-      className="p-6 cursor-pointer mx-auto border transition-shadow duration-500 ease-in-out bg-white dark:bg-background rounded-xl hover:shadow-lg flex flex-col items-center justify-center text-center space-y-4"
-    >
-      <IconComponent className="w-8 h-8 mb-4" />
-      <h2 className="text-lg font-bold">{title}</h2>
-      <p className="text-sm">{description}</p>
-    </motion.div>
+    <BlurFade delay={0.2} inView>
+      <motion.div
+        whileHover={{ y: -8 }}
+        transition={{
+          type: "spring",
+          bounce: 0.7,
+        }}
+        className="p-6 cursor-pointer mx-auto border transition-shadow duration-500 ease-in-out bg-white dark:bg-background rounded-xl hover:shadow-lg flex flex-col items-center justify-center text-center space-y-4"
+      >
+        <IconComponent className="w-8 h-8 mb-4" />
+        <h2 className="text-lg font-bold">{title}</h2>
+        <p className="text-sm">{description}</p>
+      </motion.div>
+    </BlurFade>
   );
 };
 
@@ -226,20 +231,25 @@ const Explain = () => {
   return (
     <section className="relative overflow-hidden z-10 p-4 pb-10 md:pb-40">
       <div className="flex max-w-7xl mx-auto relative z-0 justify-center gap-4 md:gap-6 items-center flex-col">
-        <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
-          Empower your shoppers{" "}
-          <span className="hidden md:inline">
-            <br />
-          </span>
-          to better project into your collection & the garments{" "}
-          <span className="hidden md:inline">
-            <br />
-          </span>
-          they buy online
-        </h1>
-        <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
-          Don't spend a ton of time and money on finding the right model for your brand. Tailor your model to suit your target audience and boost engagement.
-        </h1>
+        <BlurFade delay={0.1} inView>
+          <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
+            Empower your shoppers{" "}
+            <span className="hidden md:inline">
+              <br />
+            </span>
+            to better project into your collection & the garments{" "}
+            <span className="hidden md:inline">
+              <br />
+            </span>
+            they buy online
+          </h1>
+        </BlurFade>
+
+        <BlurFade delay={0.2} inView>
+          <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
+            Don't spend a ton of time and money on finding the right model for your brand. Tailor your model to suit your target audience and boost engagement.
+          </h1>
+        </BlurFade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {cardData.map((card, index) => (
@@ -256,9 +266,11 @@ const Explain = () => {
           ))}
         </div>
 
-        <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
+        <BlurFade delay={0.3} inView>
+          <h1 className="text-center relative z-3 max-w-2xl text-lg md:text-2xl">
             And much more...
-        </h1>
+          </h1>
+        </BlurFade>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (

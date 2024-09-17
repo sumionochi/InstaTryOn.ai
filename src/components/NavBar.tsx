@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import logoImage from '@/assets/icons/linkedin.svg';
@@ -34,12 +34,24 @@ const NavBar = (props: Props) => {
     setIsSheetOpen(!isSheetOpen);
   };
 
+  // Scroll to top function
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
       <div className='w-full sticky top-0 z-20 bg-white dark:bg-black p-4 border-b'>
         <div className='max-w-7xl w-full mx-auto'>
           <div className='flex flex-row w-full items-center justify-between'>
             <div className='relative gap-2 h-10 flex flex-row items-center justify-center'>
-              <div className='text-xl relative flex flex-row text-center duration-1000 cursor-default animate-title whitespace-normal items-center'><p>InstaTryOn</p><MousePointerClick className='w-6 h-6 ml-1 whitespace-nowrap'/></div>
+              {/* Make the InstaTryOn clickable and scroll to the top */}
+              <div onClick={handleScrollToTop} className='text-xl relative flex flex-row text-center duration-1000 cursor-pointer animate-title whitespace-normal items-center'>
+                <p>InstaTryOn</p>
+                <MousePointerClick className='w-6 h-6 ml-1 whitespace-nowrap'/>
+              </div>
             </div>
             <div className='flex flex-row items-center gap-2 sm:hidden'>
               <Themetoggle />

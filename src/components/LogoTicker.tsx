@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import BlurFade from '@/components/magicui/blur-fade'; // Importing BlurFade
 import i1 from '@/assets/slider/i1.png';
 import i2 from '@/assets/slider/i2.png';
 import i3 from '@/assets/slider/i3.png';
@@ -23,22 +24,26 @@ const images = [
 const LogoTicker = () => {
   return (
     <section className='relative z-0 py-8 px-4 pb-20 md:pb-40'>
-      <h2 className='text-center text-sm md:text-lg mb-8 font-semibold text-gray-400'>
-        Let's You and your customer's Try On styles from 10,000+ E-commerce stores, Anytime, Anywhere.
-      </h2>
-      <div className='relative overflow-hidden'>
-        <div className='absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-white via-transparent to-white dark:bg-gradient-to-r dark:from-background dark:via-transparent dark:to-background'></div>
-        <div className='flex gap-16 animate-scroll'>
-          {images.concat(images).map((src, index) => (
-            <Image
-              key={index}
-              className='flex-none h-5 md:h-8 w-auto grayscale hover:grayscale-0 transition-filter duration-200 ease-linear hover:blur-none'
-              src={src}
-              alt={`slider-${index}`}
-            />
-          ))}
+      <BlurFade delay={0.2} inView>
+        <h2 className='text-center text-sm md:text-lg mb-8 font-semibold text-gray-400'>
+          Let's You and your customer's Try On styles from 10,000+ E-commerce stores, Anytime, Anywhere.
+        </h2>
+      </BlurFade>
+      <BlurFade delay={0.3} inView>
+        <div className='relative overflow-hidden'>
+          <div className='absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-white via-transparent to-white dark:bg-gradient-to-r dark:from-background dark:via-transparent dark:to-background'></div>
+          <div className='flex gap-16 animate-scroll'>
+            {images.concat(images).map((src, index) => (
+              <Image
+                key={index}
+                className='flex-none h-5 md:h-8 w-auto grayscale hover:grayscale-0 transition-filter duration-200 ease-linear hover:blur-none'
+                src={src}
+                alt={`slider-${index}`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </BlurFade>
     </section>
   );
 };

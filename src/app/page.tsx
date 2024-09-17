@@ -40,8 +40,8 @@ export default function Home() {
       <Solutions/>
       <Showcase/>  
       <Explain/>
-      <Pricing/>
       <CMS/>
+      <Pricing/>
       <Testimonial/>
       <CardDissappear/>
       <FAQ/>

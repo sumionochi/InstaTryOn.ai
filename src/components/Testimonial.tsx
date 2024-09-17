@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
+import BlurFade from "@/components/magicui/blur-fade"; 
 
 import avatar1 from '@/assets/images/path-to-avatar1.jpg';
 import avatar2 from '@/assets/images/path-to-avatar2.jpg';
@@ -123,7 +124,6 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-
 const firstColumn = testimonials.slice(0, 5).concat(testimonials.slice(0, 5));
 const secondColumn = testimonials.slice(5, 10).concat(testimonials.slice(5, 10));
 const thirdColumn = testimonials.slice(10, 15).concat(testimonials.slice(10, 15));
@@ -183,28 +183,29 @@ const Testimonial = (props: Props) => {
           ref={firstColumnRef}
         >
           {firstColumn.map((testimonial, index) => (
-            <motion.div
-              whileHover={{ y: -8 }}
-              key={index}
-              className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
-            >
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
-              <div className="flex items-center space-x-4 mt-auto">
-                <Image
-                  src={testimonial.avatar}
-                  alt={`${testimonial.name}'s avatar`}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div className="text-left flex justify-center items-start flex-col">
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                    {testimonial.name}
-                  </h3>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    {testimonial.username}
-                  </span>
+            <BlurFade key={index} delay={0.1 + index * 0.05} inView>
+              <motion.div
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
+              >
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
+                <div className="flex items-center space-x-4 mt-auto">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name}'s avatar`}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div className="text-left flex justify-center items-start flex-col">
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </h3>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      {testimonial.username}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </BlurFade>
           ))}
         </motion.div>
 
@@ -214,28 +215,29 @@ const Testimonial = (props: Props) => {
           ref={secondColumnRef}
         >
           {secondColumn.map((testimonial, index) => (
-            <motion.div
-              whileHover={{ y: -8 }}
-              key={index}
-              className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
-            >
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
-              <div className="flex items-center space-x-4 mt-auto">
-                <Image
-                  src={testimonial.avatar}
-                  alt={`${testimonial.name}'s avatar`}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div className="text-left flex justify-center items-start flex-col">
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                    {testimonial.name}
-                  </h3>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    {testimonial.username}
-                  </span>
+            <BlurFade key={index} delay={0.1 + index * 0.05} inView>
+              <motion.div
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
+              >
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
+                <div className="flex items-center space-x-4 mt-auto">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name}'s avatar`}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div className="text-left flex justify-center items-start flex-col">
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </h3>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      {testimonial.username}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </BlurFade>
           ))}
         </motion.div>
 
@@ -245,28 +247,29 @@ const Testimonial = (props: Props) => {
           ref={thirdColumnRef}
         >
           {thirdColumn.map((testimonial, index) => (
-            <motion.div
-              whileHover={{ y: -8 }}
-              key={index}
-              className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
-            >
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
-              <div className="flex items-center space-x-4 mt-auto">
-                <Image
-                  src={testimonial.avatar}
-                  alt={`${testimonial.name}'s avatar`}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div className="text-left flex justify-center items-start flex-col">
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                    {testimonial.name}
-                  </h3>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    {testimonial.username}
-                  </span>
+            <BlurFade key={index} delay={0.1 + index * 0.05} inView>
+              <motion.div
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-background rounded-xl shadow-lg p-6 mb-6 break-inside-avoid flex flex-col justify-between border"
+              >
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{testimonial.message}</p>
+                <div className="flex items-center space-x-4 mt-auto">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name}'s avatar`}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div className="text-left flex justify-center items-start flex-col">
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </h3>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      {testimonial.username}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </BlurFade>
           ))}
         </motion.div>
       </div>

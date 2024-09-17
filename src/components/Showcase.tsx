@@ -1,7 +1,8 @@
-"use client"
-import React, { useEffect, useRef, useState } from 'react'
-import { Code, CodeXml, Pause, Play, Shirt, ShoppingBag } from 'lucide-react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+"use client";
+import React, { useEffect, useRef, useState } from 'react';
+import { CodeXml, Pause, Play, Shirt, ShoppingBag } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import BlurFade from "@/components/magicui/blur-fade"; 
 
 type Props = {}
 
@@ -64,15 +65,22 @@ const Showcase = ({}: Props) => {
     <section className='relative overflow-hidden z-10 p-4 pb-10 md:pb-40'>
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden bubbles"></div>
       <div className="absolute blur-3xl inset-0 -z-10 overflow-hidden purple-bubbles"></div>
+      
       <div className='flex relative z-0 justify-center gap-4 md:gap-6 items-center flex-col'>
-        <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
-          No model needed <br />No studio needed <br />Just your product!
-        </h1>
-        <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>
-          Upload a photo or search the web for your clothing product and generate an endless number of premium quality resolution on-model photos & virtual try-on of it.
-        </h1>
+        <BlurFade delay={0.2} inView>
+          <h1 className="text-4xl relative z-10 md:text-7xl font-extrabold text-center">
+            No model needed <br />No studio needed <br />Just your product!
+          </h1>
+        </BlurFade>
+
+        <BlurFade delay={0.3} inView>
+          <h1 className='text-center relative z-3 max-w-2xl text-lg md:text-2xl'>
+            Upload a photo or search the web for your clothing product and generate an endless number of premium quality resolution on-model photos & virtual try-on of it.
+          </h1>
+        </BlurFade>
+
         <div className='flex flex-col justify-center items-center'>
-          <div className='flex flex-col justify-center items-center'>
+          <BlurFade delay={0.4} inView>
             <div className='flex flex-row gap-4 mt-4'>
               {segments.map((segment) => (
                 <button
@@ -105,7 +113,7 @@ const Showcase = ({}: Props) => {
                 </button>
               ))}
             </div>
-          </div>
+          </BlurFade>
 
           <motion.div
             style={{
@@ -114,21 +122,21 @@ const Showcase = ({}: Props) => {
               transformPerspective: '800px',
             }}
           >
-            <div ref={uplift} className='relative border w-[100%] max-w-7xl mb-8 mt-4 rounded-xl overflow-hidden'>
-              <div className='absolute top-4 right-4 z-10'>
-                <div className='relative justify-center items-center'>
-                  <button
-                    onClick={togglePlayPause}
-                    className='group cursor-pointer flex justify-center items-center'
-                  >
-                    {isPaused ? <Play className='text-white' /> : <Pause className='text-white' />}
-                  </button>
+              <div ref={uplift} className='relative border w-[100%] max-w-7xl mb-8 mt-4 rounded-xl overflow-hidden'>
+                <div className='absolute top-4 right-4 z-10'>
+                  <div className='relative justify-center items-center'>
+                    <button
+                      onClick={togglePlayPause}
+                      className='group cursor-pointer flex justify-center items-center'
+                    >
+                      {isPaused ? <Play className='text-white' /> : <Pause className='text-white' />}
+                    </button>
+                  </div>
                 </div>
+                <video className='w-full' ref={videoRef} loop muted autoPlay>
+                  <source src='/video.mp4' type='video/mp4' />
+                </video>
               </div>
-              <video className='w-full' ref={videoRef} loop muted autoPlay>
-                <source src='/video.mp4' type='video/mp4' />
-              </video>
-            </div>
           </motion.div>
         </div>
       </div>
