@@ -5,10 +5,12 @@ import config from '@/config';
 import { useUser } from '@clerk/nextjs'
 
 export default function Settings() {
-  let user = null;
+  const user = useUser(); 
+
+  let currentUser = null;
 
   if (config?.auth?.enabled) {
-      user = useUser();
+    currentUser = user;
   }
 
   return (
