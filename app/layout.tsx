@@ -13,21 +13,21 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://insta-try-on-ai.vercel.app/"),
   title: {
-    default: 'Nextjs Starter Kit',
-    template: `%s | Nextjs Starter Kit`
+    default: 'Instant Try On',
+    template: `%s | Instant Try On`
   },
-  description: 'The Ultimate Nextjs 14 Starter Kit for quickly building your SaaS, giving you time to focus on what really matters',
+  description: 'Discover, Shop & Try on clothes virtually from all angles, whether on a model or on yourself, from the comfort of your home.',
   openGraph: {
-    description: 'The Ultimate Nextjs 14 Starter Kit for quickly building your SaaS, giving you time to focus on what really matters',
+    description: 'Discover, Shop & Try on clothes virtually from all angles, whether on a model or on yourself, from the comfort of your home.',
     images: ['https://utfs.io/f/8a428f85-ae83-4ca7-9237-6f8b65411293-eun6ii.png'],
-    url: 'https://starter.rasmic.xyz/'
+    url: 'https://insta-try-on-ai.vercel.app/'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nextjs Starter Kit',
-    description: 'The Ultimate Nextjs 14 Starter Kit for quickly building your SaaS, giving you time to focus on what really matters',
+    title: 'Instant Try On',
+    description: 'Discover, Shop & Try on clothes virtually from all angles, whether on a model or on yourself, from the comfort of your home.',
     siteId: "",
-    creator: "@rasmic",
+    creator: "",
     creatorId: "",
     images: ['https://utfs.io/f/8a428f85-ae83-4ca7-9237-6f8b65411293-eun6ii.png'],
   },
@@ -42,7 +42,7 @@ export default function RootLayout({
     <AuthWrapper>
       <html lang="en" suppressHydrationWarning>
         <head>
-          <link
+          {/* <link
             rel="preload"
             href="https://utfs.io/f/31dba2ff-6c3b-4927-99cd-b928eaa54d5f-5w20ij.png"
             as="image"
@@ -51,7 +51,7 @@ export default function RootLayout({
             rel="preload"
             href="https://utfs.io/f/69a12ab1-4d57-4913-90f9-38c6aca6c373-1txg2.png"
             as="image"
-          />
+          /> */}
         </head>
         <body className={cn(dmSans.className, 'antialiased min-h-screen border-none outline-none', 'scrollbar scrollbar-thumb scrollbar-thumb-white scrollbar-track-slate-700')} suppressHydrationWarning={true}>
           <Provider>
